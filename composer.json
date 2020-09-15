@@ -1,0 +1,54 @@
+{
+    "name": "sanjitkung/laravel-filepond",
+    "description": "Filepond server implementation for Laravel",
+    "keywords": [
+        "sanjitkung",
+        "laravel-filepond"
+    ],
+    "homepage": "https://github.com/sanjitkung/laravel-filepond",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sanjit Kung",
+            "email": "iamsanjit@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sanjitkung\\LaravelFilepond\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sanjitkung\\LaravelFilepond\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sanjitkung\\LaravelFilepond\\LaravelFilepondServiceProvider"
+            ],
+            "aliases": {
+                "LaravelFilepond": "Sanjitkung\\LaravelFilepond\\LaravelFilepondFacade"
+            }
+        }
+    }
+}
